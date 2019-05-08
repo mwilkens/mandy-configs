@@ -40,7 +40,7 @@ bindsym $mod+Shift+q kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -nb black -sb red' --entry-type=command 
 
 # change focus
 #bindsym $mod+j focus left
@@ -81,7 +81,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # Alt J
-bindsym $mod+j exec "mpv ~/Music/altj.mp3"
+#bindsym $mod+j exec "mpv ~/Music/altj.mp3"
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -160,22 +160,21 @@ exec --no-startup-id nitrogen --restore
 
 for_window [class="Xmessage"] floating enable
 
+for_window [class="GParted"] floating enable
+
 # Volume icon + volume control
 #exec /usr/bin/pasystray
 bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- && pkill -RTMIN+10 i3blocks
 bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks
 bindsym XF86AudioMute        exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+10 i3blocks
 
-bindsym $mod+Shift+n exec "xbrightness 32767"
-bindsym $mod+Shift+m exec "xbrightness 65535"
+bindsym $mod+Shift+n exec "xbacklight -dec 10 -steps 10"
+bindsym $mod+Shift+m exec "xbacklight -inc 10 -steps 10"
 
 bindsym $mod+Shift+x exec "xscreensaver-command -lock"
 
 # Disable Power Management for Wifi
 bindsym $mod+Shift+w exec iwconfig wlp3s0 power off
-
-# Lower the brightness a bit to make my life easier
-#exec xrandr --output eDP-1 --brightness 0.5
 
 mouse_warping output
 
@@ -198,6 +197,9 @@ exec "parcellite"
 exec --no-startup-id "fluxgui"
 exec --no-startup-id "nm-applet"
 exec_always --no-startup-id "/home/mandy/bin/wifi_fix.sh"
+exec --no-startup-id "mailspring -b"
+exec --no-startup-id i3-msg "workspace 2; exec /usr/bin/slack --startup"
+exec --no-startup-id i3-msg 'workspace 2; exec signal-desktop'
 
 bindsym $mod+r mode "resize"
 
@@ -228,3 +230,5 @@ client.focused          #333333 #333333 #ffffff #aaaaaa #333333
 client.unfocused        #333333 #111111 #ffffff #000000 #333333
 client.focused_inactive #333333 #111111 #ffffff #000000 #333333
 client.background #000000
+
+exec --no-startup-id i3-msg "workspace 1"
