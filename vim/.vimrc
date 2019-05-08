@@ -98,11 +98,11 @@ let g:cpp_no_function_highlight = 1
 "let ayucolor="light"  " for light version of theme
 "let ayucolor="mirage" " for mirage version of theme
 let ayucolor="dark"   " for dark version of theme
-colorscheme ayu
+"colorscheme ayu
 
 "colorscheme molokai_dark
 
-"colorscheme badwolf
+colorscheme badwolf
 "colorscheme radicalgoodspeed
 
 " Firefox like tab navigation
