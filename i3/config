@@ -29,7 +29,7 @@ font pango:Tlwg Typo 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec st
 #i3-sensible-terminal
 
 # kill focused window
@@ -40,7 +40,10 @@ bindsym $mod+Shift+q kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -nb black -sb red' --entry-type=command 
+# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -nb black -sb red' --entry-type=command 
+
+bindsym $mod+d exec --no-startup-id rofi -show drun
+bindsym $mod+Shift+d exec --no-startup-id rofi -show window
 
 # change focus
 #bindsym $mod+j focus left
@@ -158,6 +161,9 @@ exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/workspace1
 # exec --no-startup-id feh --bg-max ~/Pictures/background.jpg
 exec --no-startup-id nitrogen --restore
 
+# start composite manager
+# exec --no-startup-id compton
+
 for_window [class="Xmessage"] floating enable
 
 for_window [class="GParted"] floating enable
@@ -198,8 +204,8 @@ exec --no-startup-id "fluxgui"
 exec --no-startup-id "nm-applet"
 exec_always --no-startup-id "/home/mandy/bin/wifi_fix.sh"
 exec --no-startup-id "mailspring -b"
-exec --no-startup-id i3-msg "workspace 2; exec /usr/bin/slack --startup"
-exec --no-startup-id i3-msg 'workspace 2; exec signal-desktop'
+exec --no-startup-id i3-msg "exec /usr/bin/slack --startup"
+# exec --no-startup-id i3-msg 'workspace 2; exec signal-desktop'
 
 bindsym $mod+r mode "resize"
 

@@ -1,0 +1,50 @@
+rename SOIL.lib
+rename staples_receipt.jpeg
+search blood
+search attack
+search min
+mkdir venezuelarally810
+shell chown mandy:mandy
+rename cliRPG
+rename Death Race For Love
+rename Surgically Hacked
+rename left-anticommunism-bklt.pdf
+search juice
+rename Juice WRLD
+search Pathol
+rename Severed Survival
+rename Torn Beyond Reason
+search autopsy
+rename alien_in_the_sky
+rename alien_in_the_sky.png
+mkdir dylan_ufo
+mkdir samples
+unzip
+shell unzip %f
+rename swamp1.wav
+rename swamp2.wav
+rename bird1.wav
+rename bird2.wav
+open_with 
+':
+rename waterfall3.wav
+rename waterfall2.wav
+rename waterfall1.wav
+qq
+bkmkdir
+bcmkdir
+bcunzip
+mkdir Escape the Fate
+mkdir Motionless in White
+mkdir Scarlxrd
+mkdir Dying Is Your Latest Fashion
+shell unrar %f
+
+mkdir IMMXRTALISATIXN
+search BLACK
+search Esca
+search Motion
+search Nothing
+search Scar
+set show_hidden on
+delete
