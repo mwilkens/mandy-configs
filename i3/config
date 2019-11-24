@@ -174,8 +174,9 @@ bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- && pkill -R
 bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks
 bindsym XF86AudioMute        exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+10 i3blocks
 
-bindsym $mod+Shift+n exec "xbacklight -dec 10 -steps 10"
-bindsym $mod+Shift+m exec "xbacklight -inc 10 -steps 10"
+bindsym $mod+Shift+n exec "/home/mandy/.config/i3/blctl.sh -d 1" 
+bindsym $mod+Shift+m exec "/home/mandy/.config/i3/blctl.sh -i 1"
+exec_always --no-startup-id "/home/mandy/.config/i3/blctl.sh -s"
 
 bindsym $mod+Shift+x exec "xscreensaver-command -lock"
 
