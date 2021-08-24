@@ -1199,8 +1199,9 @@ xmakeglyphfontspecs(XftGlyphFontSpec *specs, const Glyph *glyphs, int len, int x
 		if (glyphidx) {
 			specs[numspecs].font = font->match;
 			specs[numspecs].glyph = glyphidx;
-			specs[numspecs].x = (short)xp;
-			specs[numspecs].y = (short)yp;
+			// mandy's twisted shaking st edit
+			specs[numspecs].x = (short)xp + (rand()%2 - 1);
+			specs[numspecs].y = (short)yp + (rand()%2 - 1);
 			xp += runewidth;
 			numspecs++;
 			continue;
