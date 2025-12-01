@@ -1,4 +1,3 @@
-rename SOIL.lib
 rename staples_receipt.jpeg
 search blood
 search attack
@@ -39,7 +38,6 @@ mkdir Motionless in White
 mkdir Scarlxrd
 mkdir Dying Is Your Latest Fashion
 shell unrar %f
-
 mkdir IMMXRTALISATIXN
 search BLACK
 search Esca
@@ -48,3 +46,5 @@ search Nothing
 search Scar
 set show_hidden on
 delete
+rename otl-media-academy.md
+

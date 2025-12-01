@@ -36,9 +36,11 @@ contents = [
         ,'Study'
 ]
 
+directory = '/home/mwilkens/.config/i3blocks/scripts/quote/quotes/'
+
 while True:
-    filename = random.choice(os.listdir("/home/mandy/Documents/quotes/"))
-    pathname = "/home/mandy/Documents/quotes/" + filename
+    filename = random.choice(os.listdir(directory))
+    pathname = directory + filename
 
     num = int(filename.strip('.txt').strip('mao'))
 
@@ -52,9 +54,9 @@ while True:
     if len(quote)<700:
         break
 
-print title
-print len(quote)
-print
-print quote
+print(title)
+print(len(quote))
+print()
+print(quote)
 
 call(['notify-send','-t','120000','-u','low',title,quote])
